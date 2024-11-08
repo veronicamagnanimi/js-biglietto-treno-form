@@ -4,10 +4,11 @@ const userInput = document.getElementById("username");
 const userKm = document.getElementById("distance");
 const userAge = document.getElementById("age");
 
-console.log(userInput, userKm, userAge);
 
 //elementi della card
-const usernameElem = "";
+const usernameElem = document.getElementById("name-user");
+const priceElem = document.getElementById("final-price");
+const cardElem = document.querySelector(".card");
 
 
 //funzione callback
@@ -20,7 +21,7 @@ formElem.addEventListener("submit", function(event) {
   const age = parseInt(userAge.value);
 
   console.log(totalPrice(age, km));
-});
+  });
   
   const totalPrice = (eta, kilometri) => {
     let sconto = 0;
@@ -35,6 +36,12 @@ formElem.addEventListener("submit", function(event) {
     }
     return prezzo = priceKm * kilometri * (100 - sconto) / 100;
   }
+
+  ////////
+  usernameElem.innerHTML = username;
+  priceElem.innerHTML = age;
+
+  cardElem.classList.remove("d-none");
    
   
    
