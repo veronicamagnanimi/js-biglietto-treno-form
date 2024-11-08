@@ -10,39 +10,63 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-  <div class="container">
+    <main class="pt-4">
+      <div class="container p-3 bg-secondary">
+        <h1 class="text-center text-white">
+          CALCOLA IL PREZZO DEL TUO BIGLIETTO
+        </h1>
 
-    <!-- input utente  -->
-   <form action="server" id="user-form">
-    <label class="form-label" for="username">Nome Cognome</label>
-    <input type="text" class="form-control" id="username" value="Veronica Magnanimi">
+        <!-- input utente  -->
 
-    <label class="form-label" for="distance">Km</label>
-    <input type="tel" class="form-control" id="distance" value="20">
+        <form action="server" id="user-form">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <label class="form-label" for="username">Nome Cognome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                value="Veronica Magnanimi"
+              />
+            </div>
+            <div class="col-12 col-md-4">
+              <label class="form-label" for="distance">Km</label>
+              <input type="tel" class="form-control" id="distance" value="10" />
+            </div>
+            <div class="col-12 col-md-4">
+              <label class="form-label" for="age">Età</label>
+              <input type="tel" class="form-control" id="age" value="20" />
+            </div>
+          </div>
 
-    <label class="form-label" for="age">Età</label>
-    <input type="tel" class="form-control" id="age" value="70">
+          <!-- bottone  -->
 
-    <!-- bottone  -->
-     <button class="btn btn-outline-danger mt-3" id="submit-btn" type="submit">Genera</button>
-     <button type="reset" class="btn btn-outline-danger mt-3">Annulla</button>
-   </form>
+          <button
+            class="btn btn-outline-light mt-3"
+            id="submit-btn"
+            type="submit"
+          >
+            Genera
+          </button>
+          <button type="reset" class="btn btn-outline-light mt-3">
+            Annulla
+          </button>
+        </form>
 
-   <!-- card -->
-    <div class="card d-none">
-        <div class="card-left">
+        <!-- card -->
+        <div class="card d-none">
+          <div class="card-left">
             <div id="name-user">Nome passeggero</div>
-        </div>
-        <div class="card-right">
+          </div>
+          <div class="card-right">
             <div id="final-price">Costo biglietto</div>
+          </div>
         </div>
-    </div>
-
-
-  </div>
+      </div>
+    </main>
 
     <script src="./js/script.js"></script>
   </body>

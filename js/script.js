@@ -16,14 +16,24 @@ formElem.addEventListener("submit", function(event) {
     console.log(event);
   event.preventDefault();
   
+  //prelevo i valori
   const username = userInput.value.trim();
   const km = parseInt(userKm.value);
   const age = parseInt(userAge.value);
 
+
   console.log(totalPrice(age, km));
+
+  cardElem.classList.remove("d-none");
+
+  usernameElem.innerHTML = username;
+  priceElem.innerHTML = "€" + totalPrice(age, km);
   });
-  
-  const totalPrice = (eta, kilometri) => {
+
+
+//   calcolo prezzo biglietto
+
+    const totalPrice = (eta, kilometri) => {
     let sconto = 0;
     let prezzo = 0;
     let priceKm = 0.21;
@@ -35,13 +45,15 @@ formElem.addEventListener("submit", function(event) {
         sconto = 40;
     }
     return prezzo = priceKm * kilometri * (100 - sconto) / 100;
-  }
+    
+}
 
-  ////////
-  usernameElem.innerHTML = username;
-  priceElem.innerHTML = age;
 
-  cardElem.classList.remove("d-none");
+
+
+
+
+
    
   
    
