@@ -25,44 +25,58 @@
           <div class="row">
             <div class="col-12 col-md-4">
               <label class="form-label" for="username">Nome Cognome</label>
-              <input
-                type="text"
-                class="form-control"
-                id="username"
-                value="Veronica Magnanimi"
-              />
+              <input type="text" class="form-control" id="username" />
             </div>
             <div class="col-12 col-md-4">
               <label class="form-label" for="distance">Km</label>
-              <input type="tel" class="form-control" id="distance" value="10" />
+              <input type="tel" class="form-control" id="distance" />
             </div>
             <div class="col-12 col-md-4">
               <label class="form-label" for="age">Età</label>
-              <input type="tel" class="form-control" id="age" value="20" />
+              <input type="tel" class="form-control" id="age" />
             </div>
           </div>
 
           <!-- bottone  -->
 
           <button
-            class="btn btn-outline-light mt-3"
+            class="btn btn-outline-light mt-3 mb-3"
             id="submit-btn"
             type="submit"
           >
             Genera
           </button>
-          <button type="reset" class="btn btn-outline-light mt-3">
+          <button type="reset" class="btn btn-outline-light mt-3 mb-3">
             Annulla
           </button>
         </form>
 
         <!-- card -->
-        <div class="card d-none">
-          <div class="card-left">
-            <div id="name-user">Nome passeggero</div>
-          </div>
-          <div class="card-right">
-            <div id="final-price">Costo biglietto</div>
+
+        <div class="card d-none p-3 bg-secondary">
+          <h1 class="text-center text-white">IL TUO BIGLIETTO</h1>
+          <div class="row">
+            <div class="col-12 col-md-3 mt-3 bg-primary bg-dark-subtle">
+              <div class="card-left">
+                <h3 class="fs-5">Nome/Prezzo</h3>
+                <div id="name-user"></div>
+              </div>
+              <div class="card-right">
+                <div id="final-price"></div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+              <h3 class="fs-5">Offerta</h3>
+              <p id="offer" class="text-white"></p>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+              <h3 class="fs-5">Carrozza</h3>
+              <p id="carriage" class="text-white"></p>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+              <h3 class="fs-5">Codice CP</h3>
+              <p id="code" class="text-white"></p>
+            </div>
           </div>
         </div>
       </div>
